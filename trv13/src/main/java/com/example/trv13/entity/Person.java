@@ -2,7 +2,15 @@ package com.example.trv13.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Person {
+	
+	@Id
+	@GeneratedValue
 	private int id;
 	private String name;
 	private int age;
@@ -15,6 +23,13 @@ public class Person {
 	public Person(int id, String name, int age, Date date) {
 		super();
 		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.dob = date;
+	}
+	
+	public Person(String name, int age, Date date) {
+		super();
 		this.name = name;
 		this.age = age;
 		this.dob = date;

@@ -1,12 +1,15 @@
 package com.example.trv13.jdbc;
 
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.example.trv13.entity.Person;
@@ -16,17 +19,34 @@ public class PersonJdbcDAO {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
+	
+	//Custom RowMapper
+	class PersonRowMapper implements RowMapper<Person>{
+		
+		@Override
+		public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Person person = new Person();
+			
+			person.setId(rs.getInt("id"));
+			person.setName(rs.getString("name"));
+			person.setDob(rs.getTimestamp("dob"));
+			person.setAge(rs.getInt("age"));
+			return person;
+		}
+		
+	}
+	
 	// Find All
 	public List<Person> findAll(){
 		return jdbcTemplate.query("SELECT * FROM PERSON", 
-				new BeanPropertyRowMapper<Person>(Person.class));
+				new PersonRowMapper());
 	}
 	
 	// Find By ID
 	public Person findById(int id){
 		return jdbcTemplate.queryForObject(
 				"SELECT * FROM PERSON where id=?", 
-				new BeanPropertyRowMapper<Person>(Person.class),
+				new PersonRowMapper(),
 				new Object[] {id}
 			);
 	}
@@ -59,7 +79,5 @@ public class PersonJdbcDAO {
 						new Timestamp(person.getDob().getTime()),
 						person.getId()
 				});
-	}
-	
-	
+	}	
 }
