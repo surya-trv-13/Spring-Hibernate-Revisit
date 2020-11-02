@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.trv13.entity.Person;
 import com.example.trv13.jdbc.PersonJdbcDAO;
 
-@SpringBootApplication
-public class SpringbootApplication implements CommandLineRunner{
+//@SpringBootApplication
+public class SpringJdbcApplication implements CommandLineRunner{
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 			
@@ -21,7 +21,7 @@ public class SpringbootApplication implements CommandLineRunner{
 	PersonJdbcDAO personJdbcDao; 
 	
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootApplication.class, args);
+		SpringApplication.run(SpringJdbcApplication.class, args);
 	}
 
 	@Override
