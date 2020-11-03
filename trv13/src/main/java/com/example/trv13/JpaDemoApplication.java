@@ -29,10 +29,10 @@ public class JpaDemoApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		logger.info("User is = {}",repository.findById(10001));
 //		
-//		logger.info("All datas are = {}",repository.findAll());
+		logger.info("All datas are = {}",repository.findAll());
 //		
-//		logger.info("User deleted is 10002 rows deleted = {}",repository.deleteById(10002));
-//		logger.info("Inserting new row for ID 10004", repository.insert(new Person(10004, "Shreya", 22 , new Date())) );
-//		logger.info("Updating existing row for ID 10003", repository.update(new Person(10003, "Saptarshi", 41 , new Date())) );
+		repository.deleteById(10002); // Deleting row 10002
+		logger.info("Inserting new row for ID 10004 {}", repository.insert(new Person("Shreya", 22 , new Date())) );
+		logger.info("Updating existing row for ID 10003", repository.update(new Person(10003, "Suman", 41 , new Date())) );
 	}
 }
