@@ -1,0 +1,1 @@
+insert into course(id, name) values(1001, 'Origin by Dan Brown');

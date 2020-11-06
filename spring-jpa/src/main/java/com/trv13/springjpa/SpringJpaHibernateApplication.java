@@ -1,13 +1,31 @@
 package com.trv13.springjpa;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class SpringJpaHibernateApplication {
+import com.trv13.springjpa.repository.CourseRepository;
 
+@SpringBootApplication
+public class SpringJpaHibernateApplication implements CommandLineRunner {
+
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@Autowired
+	CourseRepository repository;
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringJpaHibernateApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		logger.info("Object at 1001 is {}", repository.findById(1001));
 	}
 
 }
