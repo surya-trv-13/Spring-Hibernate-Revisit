@@ -36,7 +36,18 @@ public class CourseRepository {
 	public void playWithEntityManager() {
 		Course course = new Course("Java by Rasmi das");
 		em.persist(course);
+		Course course2 = new Course("Software Testing by Naresh Chauhan");
+		em.persist(course2);
+		em.flush();
 		
-		course.setName("Java in 100 steps");
+//		em.detach(course2);
+//		em.clear();
+		
+		
+		course.setName("Java by Rasmi Sir --> Updated");
+		course2.setName("Software Testing by Naresh Chauhan --> Updated");
+		
+		em.refresh(course);
+		em.flush();
 	}
 }
