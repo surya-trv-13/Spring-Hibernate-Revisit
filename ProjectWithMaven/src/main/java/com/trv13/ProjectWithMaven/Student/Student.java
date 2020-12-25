@@ -1,16 +1,9 @@
-package com.trv13.ProjectWithMaven;
+package com.trv13.ProjectWithMaven.Student;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="student_details")
 public class Student {
-	@Id
-	int id;
-	String name;
-	String subject;
+	private int id;
+	private String name;
+	private String subject;
 	
 	public Student() {
 		
