@@ -22,8 +22,10 @@ public class App
         SessionFactory factory = cfg.buildSessionFactory(); // SessionFactory is a factory to use the credential of the xml used.
         
         Student st = new Student();
+        st.setId(1);
         st.setName("Surya");
         st.setSubject("Java<3");
+        st.setX(13);
         
         Session session = factory.openSession(); // Open seesion using the session factory
         Transaction transaction = session.beginTransaction(); // Just to start making transaction
