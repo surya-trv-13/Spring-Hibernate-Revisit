@@ -1,5 +1,7 @@
 package com.trv13.ProjectWithMaven;
 
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,11 +23,13 @@ public class App
 //        if the name is different or located in some other folder then it is required to mentioned
         SessionFactory factory = cfg.buildSessionFactory(); // SessionFactory is a factory to use the credential of the xml used.
         
+        //creating Student Object
         Student st = new Student();
         st.setId(1);
         st.setName("Surya");
         st.setSubject("Java<3");
         st.setX(13);
+        st.setDate(new Date());
         
         Session session = factory.openSession(); // Open seesion using the session factory
         Transaction transaction = session.beginTransaction(); // Just to start making transaction
