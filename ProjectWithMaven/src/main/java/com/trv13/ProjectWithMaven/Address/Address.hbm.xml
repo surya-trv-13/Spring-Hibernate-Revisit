@@ -6,12 +6,12 @@
 <hibernate-mapping>
 	<class name="com.trv13.ProjectWithMaven.Address.Address" table="Address">
 		<id name="addressId" column="address_id">
-			<generator class="native"></generator>
+			<generator class="native"/>
 		</id>
-		<property name="isOpen" column="is_open" type="boolean"></property>
-		<property name="location" column="add_location" type="string"></property>
-		<property name="city" column="add_city" type="string"></property>
-		<property name="date" column="add_date" type="java.util.Date"></property>
-		<property name="image" column="add_image" type="binary" length="2500000"></property>
+		<property name="isOpen" column="is_open" type="boolean"/>
+		<property name="location" column="add_location" type="string"/>
+		<property name="city" column="add_city" type="string"/>
+		<property name="date" column="add_date" type="java.util.Date"/>
+		<property name="image" column="add_image" type="binary" length="2500000"/>
 	</class>
 </hibernate-mapping>
