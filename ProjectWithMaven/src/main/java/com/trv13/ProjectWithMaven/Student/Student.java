@@ -20,7 +20,7 @@ public class Student {
 	@Column(name="student_subject")
 	private String subject;
 	
-//	@Transient	// This will restrict in creating column for the given field
+	@Transient	// This will restrict in creating column for the given field
 	private int x;
 	
 	public Student() {
