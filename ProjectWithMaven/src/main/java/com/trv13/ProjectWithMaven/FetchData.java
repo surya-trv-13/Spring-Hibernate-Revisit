@@ -17,10 +17,16 @@ public class FetchData {
 		session.beginTransaction();
 		
 		Student student = (Student)session.get(Student.class, 50); // using get method
+		System.out.println("Before printing data");
 		System.out.println(student);
+		System.out.println("After printing data");
+		
+		System.out.println("-------------------");
 		
 		Address address = (Address)session.load(Address.class, 3); // using load method
-		System.out.println(address);
+		System.out.println("Before printing data");
+		System.out.println(address);	// Lazy Initialization
+		System.out.println("After printing data");
 		
 		session.getTransaction().commit();
 		session.close();
