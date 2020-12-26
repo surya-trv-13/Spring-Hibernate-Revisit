@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.trv13.ProjectWithMaven.Address.Address;
 import com.trv13.ProjectWithMaven.Student.Student;
 
 /**
@@ -31,9 +32,14 @@ public class App
         st.setX(13);
         st.setDate(new Date());
         
+        //creaeting Address Object
+        Address address = new Address();
+        address.setIsOpen(0==1);
+        
         Session session = factory.openSession(); // Open seesion using the session factory
         Transaction transaction = session.beginTransaction(); // Just to start making transaction
         session.save(st);
+        session.save(address);
         transaction.commit();
         
         session.close();

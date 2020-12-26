@@ -1,10 +1,14 @@
 package com.trv13.ProjectWithMaven.Student;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
@@ -23,6 +27,10 @@ public class Student {
 	@Transient	// This will restrict in creating column for the given field
 	private int x;
 	
+	@Column(name="add_date")
+	@Temporal(TemporalType.DATE)
+	private Date date;
+	
 	public Student() {
 		super();
 	}
@@ -35,6 +43,14 @@ public class Student {
 		this.x = x;
 	}
 	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	public int getX() {
 		return x;
 	}
