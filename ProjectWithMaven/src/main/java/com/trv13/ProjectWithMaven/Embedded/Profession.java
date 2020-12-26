@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Profession {
 	private String type;
-	private String EmployeeId;
+	private String employeeId;
 	private Date joinDate;
 	private boolean isWorking;
 	public Profession() {
@@ -14,7 +14,7 @@ public class Profession {
 	public Profession(String type, String employeeId, Date joinDate, boolean isWorking) {
 		super();
 		this.type = type;
-		EmployeeId = employeeId;
+		this.employeeId = employeeId;
 		this.joinDate = joinDate;
 		this.isWorking = isWorking;
 	}
@@ -25,10 +25,10 @@ public class Profession {
 		this.type = type;
 	}
 	public String getEmployeeId() {
-		return EmployeeId;
+		return employeeId;
 	}
 	public void setEmployeeId(String employeeId) {
-		EmployeeId = employeeId;
+		this.employeeId = employeeId;
 	}
 	public Date getJoinDate() {
 		return joinDate;
@@ -36,16 +36,16 @@ public class Profession {
 	public void setJoinDate(Date joinDate) {
 		this.joinDate = joinDate;
 	}
-	public boolean isWorking() {
+	public boolean getIsWorking() {
 		return isWorking;
 	}
-	public void setWorking(boolean isWorking) {
+	public void setIsWorking(boolean isWorking) {
 		this.isWorking = isWorking;
 	}
 	
 	@Override
 	public String toString() {
-		return "Professsion [type=" + type + ", EmployeeId=" + EmployeeId + ", joinDate=" + joinDate + ", isWorking="
+		return "Professsion [type=" + type + ", EmployeeId=" + employeeId + ", joinDate=" + joinDate + ", isWorking="
 				+ isWorking + "]";
 	}
 }

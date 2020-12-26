@@ -12,5 +12,6 @@
 		<property name="show_sql">true</property>
 		<mapping class="com.trv13.ProjectWithMaven.Student.Student"/>
 		<mapping resource="com/trv13/ProjectWithMaven/Address/Address.hbm.xml" />
+		<mapping resource="com/trv13/ProjectWithMaven/Embedded/Person.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
