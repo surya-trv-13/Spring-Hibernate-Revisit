@@ -12,6 +12,6 @@
 		<property name="location" column="add_location" type="string"/>
 		<property name="city" column="add_city" type="string"/>
 		<property name="date" column="add_date" type="java.util.Date"/>
-		<property name="image" column="add_image" type="binary" length="2500000"/>
+		<property name="image" column="add_image" type="blob"/>
 	</class>
 </hibernate-mapping>

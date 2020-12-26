@@ -1,6 +1,11 @@
 package com.trv13.ProjectWithMaven.Address;
 
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.Date;
+
+import javax.sql.rowset.serial.SerialBlob;
+import javax.sql.rowset.serial.SerialException;
 
 public class Address {
 	private int addressId;
@@ -52,8 +57,8 @@ public class Address {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public byte[] getImage() {
-		return image;
+	public Blob getImage() throws SerialException, SQLException {
+		return new SerialBlob(image);
 	}
 	public void setImage(byte[] image) {
 		this.image = image;
