@@ -8,6 +8,10 @@
 		<id name="addressId" column="address_id">
 			<generator class="native"></generator>
 		</id>
-		<property name="isOpen" column="is_open" type="java.lang.Boolean"></property>
+		<property name="isOpen" column="is_open" type="boolean"></property>
+		<property name="location" column="add_location" type="string"></property>
+		<property name="city" column="add_city" type="string"></property>
+		<property name="date" column="add_date" type="java.util.Date"></property>
+		<property name="image" column="add_image" type="binary" length="2500000"></property>
 	</class>
 </hibernate-mapping>
