@@ -30,23 +30,25 @@ public class App {
 		st.setDate(new Date());
 
 		// creaeting Address Object
-		Address address = new Address();
-		address.setIsOpen(0 == 1);
-		address.setAddressId(1);
-		address.setCity("Bhubaneswar");
-		address.setLocation("Jharpada");
-		address.setDate(new Date());
-		// Inserting Image
-		FileInputStream fis = new FileInputStream("src/main/java/picture/robot.jpg");
-		byte[] b = new byte[fis.available()];
-		fis.read(b);
-		address.setImage(b);
-		fis.close();
+//		Address address = new Address();
+//		address.setIsOpen(0 == 1);
+//		address.setAddressId(1);
+//		address.setCity("Bhubaneswar");
+//		address.setLocation("Jharpada");
+//		address.setDate(new Date());
+//		// Inserting Image
+//		FileInputStream fis = new FileInputStream("src/main/java/picture/robot.jpg");
+//		byte[] b = new byte[fis.available()];
+//		fis.read(b);
+//		address.setImage(b);
+//		fis.close();
 
 		Session session = factory.openSession(); // Open seesion using the session factory
 		Transaction transaction = session.beginTransaction(); // Just to start making transaction
+		
 		session.save(st);
-		session.save(address);
+//		session.save(address);
+		
 		transaction.commit();
 
 		session.close();
