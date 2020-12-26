@@ -2,7 +2,11 @@ package com.trv13.ProjectWithMaven;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Date;
+
+import javax.sql.rowset.serial.SerialBlob;
+import javax.sql.rowset.serial.SerialException;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,7 +17,7 @@ import com.trv13.ProjectWithMaven.Address.Address;
 import com.trv13.ProjectWithMaven.Student.Student;
 
 public class App {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, SerialException, SQLException {
 		System.out.println("Project Started...");
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml"); // Mentioning the configuration file is OPTIONAL
@@ -24,23 +28,23 @@ public class App {
 		// creating Student Object
 		Student st = new Student();
 		st.setId(1);
-		st.setName("Surya");
-		st.setSubject("Java<3");
+		st.setName("SuryaN");
+		st.setSubject("Java Hibernate<3");
 		st.setX(13);
 		st.setDate(new Date());
 
 		// creaeting Address Object
 //		Address address = new Address();
-//		address.setIsOpen(0 == 1);
+//		address.setIsOpen(true);
 //		address.setAddressId(1);
-//		address.setCity("Bhubaneswar");
-//		address.setLocation("Jharpada");
+//		address.setCity("Kanpur");
+//		address.setLocation("Flying Beasts");
 //		address.setDate(new Date());
 //		// Inserting Image
 //		FileInputStream fis = new FileInputStream("src/main/java/picture/robot.jpg");
 //		byte[] b = new byte[fis.available()];
 //		fis.read(b);
-//		address.setImage(b);
+//		address.setImage(new SerialBlob(b));
 //		fis.close();
 
 		Session session = factory.openSession(); // Open seesion using the session factory

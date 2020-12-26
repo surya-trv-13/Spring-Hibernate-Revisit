@@ -11,7 +11,7 @@
 		<property name="isOpen" column="is_open" type="boolean"/>
 		<property name="location" column="add_location" type="string"/>
 		<property name="city" column="add_city" type="string"/>
-		<property name="date" column="add_date" type="java.util.Date"/>
+		<property name="date" column="add_date" type="date"/>
 		<property name="image" column="add_image" type="blob"/>
 	</class>
 </hibernate-mapping>

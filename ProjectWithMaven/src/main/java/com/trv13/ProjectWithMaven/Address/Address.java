@@ -1,11 +1,7 @@
 package com.trv13.ProjectWithMaven.Address;
 
 import java.sql.Blob;
-import java.sql.SQLException;
 import java.util.Date;
-
-import javax.sql.rowset.serial.SerialBlob;
-import javax.sql.rowset.serial.SerialException;
 
 public class Address {
 	private int addressId;
@@ -13,12 +9,12 @@ public class Address {
 	private String location;
 	private String city;
 	private Date date;
-	private byte[] image;
+	private Blob image;
 	public Address() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Address(int addressId, boolean isOpen, String location, String city, Date date, byte[] image) {
+	public Address(int addressId, boolean isOpen, String location, String city, Date date, Blob image) {
 		super();
 		this.addressId = addressId;
 		this.isOpen = isOpen;
@@ -57,10 +53,16 @@ public class Address {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public Blob getImage() throws SerialException, SQLException {
-		return new SerialBlob(image);
+	public Blob getImage() {
+		return image;
 	}
-	public void setImage(byte[] image) {
+	public void setImage(Blob image) {
 		this.image = image;
 	}
+	@Override
+	public String toString() {
+		return "Address [addressId=" + addressId + ", isOpen=" + isOpen + ", location=" + location + ", city=" + city
+				+ ", date=" + date + "]";
+	}
+	
 }
