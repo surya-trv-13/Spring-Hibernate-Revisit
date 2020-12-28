@@ -15,5 +15,7 @@
 		<mapping resource="com/trv13/ProjectWithMaven/Embedded/Person.hbm.xml"/>
 		<mapping resource="com/trv13/map/OneToOne/Question.hbm.xml"/>
 		<mapping resource="com/trv13/map/OneToOne/Answer.hbm.xml"/>
+		<mapping resource="com/trv13/map/ManyToOne/Question.hbm.xml"/>
+		<mapping resource="com/trv13/map/ManyToOne/Answer.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

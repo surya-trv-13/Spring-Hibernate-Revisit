@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.trv13.map.ManyToOne">
+	<class name="QuestionOTM" table="question_otm">
+		<id name="questionId" column="question_id" type="java.lang.Integer">
+			<generator class="increment"/>
+		</id>
+		<property name="question" column="question" type="java.lang.String"/>
+		<list name="answers">
+			<key column="q_id"></key>
+			<index column="type"></index>
+			<one-to-many class="com.trv13.map.ManyToOne.AnswerOTM"/>
+		</list>
+	</class>
+</hibernate-mapping>
