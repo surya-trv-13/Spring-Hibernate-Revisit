@@ -9,5 +9,6 @@
 			<generator class="increment"></generator>
 		</id>
 		<property name="answer" column="answer" type="java.lang.String"/>
+		<many-to-one name="question" column="question_id" cascade="all"></many-to-one>
 	</class>
 </hibernate-mapping>

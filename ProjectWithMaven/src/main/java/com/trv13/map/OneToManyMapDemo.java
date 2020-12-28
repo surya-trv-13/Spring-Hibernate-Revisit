@@ -33,6 +33,11 @@ public class OneToManyMapDemo {
 		answer2.setAnswerId(123);
 		answer2.setAnswer("Java helps to build application");
 		
+		//For bi-directional
+		answer.setQuestion(question);
+		answer1.setQuestion(question);
+		answer2.setQuestion(question);
+		
 		List<AnswerOTM> list = new ArrayList<AnswerOTM>();
 		list.add(answer);
 		list.add(answer1);
