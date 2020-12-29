@@ -2,3 +2,20 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.trv13.map.ManyToMany">
+	<class name="Employee" table="EMP">
+		<id name="employeeId" column="eid" type="java.lang.Integer" />
+		<property name="employeeName" type="java.lang.String">
+			<column name="emp_name"></column>
+		</property>
+		<property name="department" type="java.lang.String">
+			<column name="emp_dept"></column>
+		</property>
+		<list name="project" cascade="all">
+			<key column="employee_id"></key>
+			<index column="p_index"></index>
+			<many-to-many column="project_id" class="Project"></many-to-many>
+		</list>
+	</class>
+</hibernate-mapping>

@@ -2,3 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC 
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.trv13.map.ManyToMany">
+	<class name="Project" table="PROJECT">
+		<id name="projectId" column="pid" type="int"></id>
+		<property name="projectName" column="p_name"></property>
+		<property name="estimateDays" column="time"></property>
+		<list name="employee" cascade="all">
+			<key column="project_id"></key>
+			<index column="e_index"></index>
+			<many-to-many column="employee_id" class="Employee"></many-to-many>
+		</list>
+	</class>
+</hibernate-mapping>
+    
