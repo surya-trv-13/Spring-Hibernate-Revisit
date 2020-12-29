@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.trv13.map.ManyToOne.AnswerOTM;
 import com.trv13.map.ManyToOne.QuestionOTM;
+import com.trv13.map.OneToOne.Answer;
 
 public class OneToManyMapDemo {
 	public static void main(String[] args) {
@@ -53,7 +54,15 @@ public class OneToManyMapDemo {
 		session.save(answer);
 		session.save(answer2);
 		session.save(answer1);
-			
+		
+		//Get Value
+//		QuestionOTM q = (QuestionOTM)session.get(QuestionOTM.class, 1);
+//		System.out.println(q.getQuestion());
+//		
+//		for(AnswerOTM a :q.getAnswers()) {
+//			System.out.println(a.getAnswer());
+//		}
+
 		session.getTransaction().commit();
 		session.close();
 		factory.close();
