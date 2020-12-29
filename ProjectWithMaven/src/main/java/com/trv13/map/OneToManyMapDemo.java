@@ -22,11 +22,11 @@ public class OneToManyMapDemo {
 		question.setQuestionId(12);
 		
 		AnswerOTM answer = new AnswerOTM();
-		answer.setAnswerId(123);
+		answer.setAnswerId(121);
 		answer.setAnswer("Java is a programming Language");
 		
 		AnswerOTM answer1 = new AnswerOTM();
-		answer1.setAnswerId(123);
+		answer1.setAnswerId(122);
 		answer1.setAnswer("Java has many Frameworks");
 		
 		AnswerOTM answer2 = new AnswerOTM();
