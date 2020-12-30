@@ -54,6 +54,7 @@ public class ManyToManyMapDemo {
 		e1.setProject(pList);
 		e2.setProject(pList);
 		
+		
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction(); 
 		
@@ -63,6 +64,11 @@ public class ManyToManyMapDemo {
 //		session.save(p1);
 //		session.save(p2);
 //		
+		
+		//Eager Loading;
+		Employee ee = (Employee)session.get(Employee.class, 121);
+		System.out.println(ee.getEmployeeName());
+		System.out.println(ee.getProject().size());
 		tx.commit();
 		session.close();
 		factory.close();

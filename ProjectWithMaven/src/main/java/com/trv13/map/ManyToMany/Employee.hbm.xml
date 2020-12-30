@@ -15,7 +15,7 @@
 		<list name="project" cascade="all">
 			<key column="employee_id"></key>
 			<index column="p_index"></index>
-			<many-to-many column="project_id" class="Project"></many-to-many>
+			<many-to-many column="project_id" class="Project" lazy="false"></many-to-many>
 		</list>
 	</class>
 </hibernate-mapping>
