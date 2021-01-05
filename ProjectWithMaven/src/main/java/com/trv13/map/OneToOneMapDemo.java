@@ -16,23 +16,21 @@ public class OneToOneMapDemo {
 
 		// Creating Question Object
 		Question question = new Question();
-		question.setQuestionId(12);
+		question.setId(344);
 		question.setQuestion("What is Java?");
 
 		Answer answer = new Answer();
 		answer.setAnswer("Java is a programming Language");
-		answer.setAnswerId(324);
-		question.setAnswer(answer);
+		answer.setQuestion(question);
 
 		// Creating Question Object
 		Question question1 = new Question();
-		question1.setQuestionId(19);
+		question1.setId(123);
 		question1.setQuestion("What is C++?");
 
 		Answer answer1 = new Answer();
 		answer1.setAnswer("C++ is a programming Language");
-		answer1.setAnswerId(343);
-		question1.setAnswer(answer1);
+		answer1.setQuestion(question1);
 
 		Session session = factory.openSession();
 		session.beginTransaction();

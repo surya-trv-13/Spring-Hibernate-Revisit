@@ -1,23 +1,23 @@
 package com.trv13.map.OneToOne;
 
 public class Answer {
-	private int answerId;
+	private int id;
 	private String answer;
 	private Question question;
 	public Answer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Answer(int answerId, String answer, Question question) {
+	public Answer(int id, String answer, Question question) {
 		super();
-		this.answerId = answerId;
+		this.id = id;
 		this.answer = answer;
 	}
-	public int getAnswerId() {
-		return answerId;
+	public int getId() {
+		return id;
 	}
-	public void setAnswerId(int answerId) {
-		this.answerId = answerId;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getAnswer() {
 		return answer;
@@ -33,7 +33,7 @@ public class Answer {
 	}
 	@Override
 	public String toString() {
-		return "Answer [answerId=" + answerId + ", answer=" + answer  + "]";
+		return "Answer [answerId=" + id + ", answer=" + answer  + "]";
 	}
 	
 }

@@ -1,24 +1,24 @@
 package com.trv13.map.OneToOne;
 
 public class Question {
-	private int questionId;
+	private int id;
 	private String question;
 	
 	private Answer answer;
 	public Question() {
 		super();
 	}
-	public Question(int questionId, String question, Answer answer) {
+	public Question(int id, String question, Answer answer) {
 		super();
-		this.questionId = questionId;
+		this.id = id;
 		this.question = question;
 		this.answer = answer;
 	}
-	public int getQuestionId() {
-		return questionId;
+	public int getId() {
+		return id;
 	}
-	public void setQuestionId(int questionId) {
-		this.questionId = questionId;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getQuestion() {
 		return question;

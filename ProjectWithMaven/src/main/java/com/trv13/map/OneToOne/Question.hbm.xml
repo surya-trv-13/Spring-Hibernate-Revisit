@@ -5,8 +5,10 @@
 
 <hibernate-mapping package="com.trv13.map.OneToOne">
 	<class name="Question" table="Question">
-		<id name="questionId" column="question_id" type="int"/>
+		<id name="id" column="id" type="int">
+			<generator class="assigned"></generator>
+		</id>
 		<property name="question" column="question" type="string"/>
-		<one-to-one name="answer" class="Answer" cascade="all"></one-to-one>
+		<one-to-one name="answer" class="Answer"/>
 	</class>
 </hibernate-mapping>

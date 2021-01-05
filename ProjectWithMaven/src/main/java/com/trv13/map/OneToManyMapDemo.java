@@ -9,7 +9,6 @@ import org.hibernate.cfg.Configuration;
 
 import com.trv13.map.ManyToOne.AnswerOTM;
 import com.trv13.map.ManyToOne.QuestionOTM;
-import com.trv13.map.OneToOne.Answer;
 
 public class OneToManyMapDemo {
 	public static void main(String[] args) {
