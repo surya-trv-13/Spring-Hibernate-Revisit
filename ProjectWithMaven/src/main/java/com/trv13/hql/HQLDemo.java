@@ -1,8 +1,10 @@
 package com.trv13.hql;
 
+import java.util.Arrays;
 import java.util.List;
 
-import org.hibernate.Query;
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -25,7 +27,7 @@ public class HQLDemo {
 		Query q = session.createQuery(query2);
 		q.setParameter("x", 123);
 		
-		List<Question> list = q.list();
+		List<Question> list = q.getResultList();
 		for (Question question : list) {
 			System.out.println(
 					question.getId() + " : " + question.getQuestion() + " : " + question.getAnswer().getAnswer());
@@ -48,6 +50,14 @@ public class HQLDemo {
 		int rows = q2.executeUpdate();
 		
 		System.out.println(rows+" objects updated");
+		
+		// Join using HQL
+		Query q3 = session.createQuery("select q.question, q.questionId, a.answer from QuestionOTM as q INNER JOIN q.answers as a");
+		List<Object[]> joinList = q3.getResultList();
+		
+		for(Object[] obj: joinList) {
+			System.out.println(Arrays.toString(obj));
+		}
 		
 		transaction.commit();
 		session.close();
