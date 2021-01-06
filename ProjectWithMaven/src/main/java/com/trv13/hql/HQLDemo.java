@@ -36,10 +36,18 @@ public class HQLDemo {
 		Transaction transaction = session.beginTransaction();
 		
 		// Delete HQL
-		Query q2 = session.createQuery("delete from Question where id=:id");
-		q2.setParameter("id", 344);
+//		Query q2 = session.createQuery("delete from Question where id=:id");
+//		q2.setParameter("id", 344);
+//		int rows = q2.executeUpdate();
+//		System.out.println("Deleted :"+ rows);
+		
+		// Update HQL
+		Query q2 = session.createQuery("update Question set question=:q where id=:id");
+		q2.setParameter("q", "What is C++ Programming ?");
+		q2.setParameter("id", 123);
 		int rows = q2.executeUpdate();
-		System.out.println("Deleted :"+ rows);
+		
+		System.out.println(rows+" objects updated");
 		
 		transaction.commit();
 		session.close();
