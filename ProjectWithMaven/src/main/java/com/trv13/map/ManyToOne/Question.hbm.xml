@@ -6,10 +6,10 @@
 <hibernate-mapping package="com.trv13.map.ManyToOne">
 	<class name="QuestionOTM" table="question_otm">
 		<id name="questionId" column="question_id" type="java.lang.Integer">
-			<generator class="increment"/>
+			<generator class="assigned"/>
 		</id>
 		<property name="question" column="question" type="java.lang.String"/>
-		<list name="answers">
+		<list name="answers" cascade="all">
 			<key column="q_id"></key>
 			<index column="type"></index>
 			<one-to-many class="com.trv13.map.ManyToOne.AnswerOTM"/>

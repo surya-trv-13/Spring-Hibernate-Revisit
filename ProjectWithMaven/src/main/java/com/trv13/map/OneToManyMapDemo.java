@@ -18,20 +18,20 @@ public class OneToManyMapDemo {
 		SessionFactory factory = cfg.buildSessionFactory();
 		
 		QuestionOTM question = new QuestionOTM();
-		question.setQuestion("What is Java?");
-		question.setQuestionId(12);
+		question.setQuestion("What is Hibernate?");
+		question.setQuestionId(1223);
 		
 		AnswerOTM answer = new AnswerOTM();
-		answer.setAnswerId(121);
-		answer.setAnswer("Java is a programming Language");
+		answer.setAnswerId(125);
+		answer.setAnswer("Hibernate is a Framework of Java");
 		
 		AnswerOTM answer1 = new AnswerOTM();
-		answer1.setAnswerId(122);
-		answer1.setAnswer("Java has many Frameworks");
+		answer1.setAnswerId(1298);
+		answer1.setAnswer("Save data in Database");
 		
 		AnswerOTM answer2 = new AnswerOTM();
-		answer2.setAnswerId(123);
-		answer2.setAnswer("Java helps to build application");
+		answer2.setAnswerId(1234);
+		answer2.setAnswer("Persistence in nature.");
 		
 		//For bi-directional
 		answer.setQuestion(question);
@@ -50,10 +50,10 @@ public class OneToManyMapDemo {
 		
 		session.save(question);
 		
-		session.save(answer);
-		session.save(answer2);
-		session.save(answer1);
-		
+//		session.save(answer);
+//		session.save(answer2);
+//		session.save(answer1);
+//		
 		//Get Value
 //		QuestionOTM q = (QuestionOTM)session.get(QuestionOTM.class, 1);
 //		System.out.println(q.getQuestion());
