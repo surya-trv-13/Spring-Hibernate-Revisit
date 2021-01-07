@@ -18,8 +18,8 @@ public class PaginationDemo {
 		
 		Query<Employee> query = session.createQuery("from Employee");
 		
-		query.setFirstResult(2);
-		query.setMaxResults(5);
+		query.setFirstResult(2); // This will set the starting index of the print
+		query.setMaxResults(5); // This will set the no. of data to fetch after starting index.
 		
 		List<Employee> list = query.getResultList();
 		for(Employee emp: list) {
