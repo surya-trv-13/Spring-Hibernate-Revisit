@@ -7,3 +7,6 @@ For One to Many
 
 Difference between JPA and Hibernate
 1. https://www.youtube.com/watch?v=SH29O-bcQlc&list=WL&index=1
+
+Second level caching
+1. https://howtodoinjava.com/hibernate/hibernate-ehcache-configuration-tutorial/

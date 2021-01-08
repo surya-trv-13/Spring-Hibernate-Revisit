@@ -11,14 +11,20 @@
 		<property name="hbm2ddl.auto">update</property>
 		<property name="format_sql">true</property>
 		<property name="show_sql">true</property>
-		<mapping class="com.trv13.ProjectWithMaven.Student.Student"/>
-		<mapping resource="com/trv13/ProjectWithMaven/Address/Address.hbm.xml" />
-		<mapping resource="com/trv13/ProjectWithMaven/Embedded/Person.hbm.xml"/>
-		<mapping resource="com/trv13/map/OneToOne/Question.hbm.xml"/>
-		<mapping resource="com/trv13/map/OneToOne/Answer.hbm.xml"/>
-		<mapping resource="com/trv13/map/ManyToOne/Question.hbm.xml"/>
-		<mapping resource="com/trv13/map/ManyToOne/Answer.hbm.xml"/>
-		<mapping resource="com/trv13/map/ManyToMany/Employee.hbm.xml"/>
-		<mapping resource="com/trv13/map/ManyToMany/Project.hbm.xml"/>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+
+		<mapping class="com.trv13.ProjectWithMaven.Student.Student" />
+		<mapping
+			resource="com/trv13/ProjectWithMaven/Address/Address.hbm.xml" />
+		<mapping
+			resource="com/trv13/ProjectWithMaven/Embedded/Person.hbm.xml" />
+		<mapping resource="com/trv13/map/OneToOne/Question.hbm.xml" />
+		<mapping resource="com/trv13/map/OneToOne/Answer.hbm.xml" />
+		<mapping resource="com/trv13/map/ManyToOne/Question.hbm.xml" />
+		<mapping resource="com/trv13/map/ManyToOne/Answer.hbm.xml" />
+		<mapping resource="com/trv13/map/ManyToMany/Employee.hbm.xml" />
+		<mapping resource="com/trv13/map/ManyToMany/Project.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

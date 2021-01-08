@@ -5,6 +5,7 @@
 
 <hibernate-mapping package="com.trv13.map.ManyToMany">
 	<class name="Employee" table="EMP">
+		<cache usage = "read-write"/>
 		<id name="employeeId" column="eid" type="java.lang.Integer" />
 		<property name="employeeName" type="java.lang.String">
 			<column name="emp_name"></column>
