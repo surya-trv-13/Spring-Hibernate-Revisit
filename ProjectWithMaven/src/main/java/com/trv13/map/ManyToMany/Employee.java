@@ -42,4 +42,10 @@ public class Employee {
 	public void setProject(List<Project> project) {
 		this.project = project;
 	}
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", department=" + department
+				+ ", project=" + project + "]";
+	}
+	
 }
