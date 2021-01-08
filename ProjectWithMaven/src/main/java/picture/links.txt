@@ -4,3 +4,6 @@ For the Embeded Objects
 
 For One to Many 
 1. https://mkyong.com/hibernate/hibernate-one-to-many-relationship-example/
+
+Difference between JPA and Hibernate
+1. https://www.youtube.com/watch?v=SH29O-bcQlc&list=WL&index=1
