@@ -10,3 +10,10 @@ Difference between JPA and Hibernate
 
 Second level caching
 1. https://howtodoinjava.com/hibernate/hibernate-ehcache-configuration-tutorial/
+
+Adding Favicon in Spring MVC
+1. https://www.javacodegeeks.com/2014/02/configure-favicon-ico-in-spring-mvc-based-application.html
+2. https://stackoverflow.com/questions/28964888/favicon-ico-doesnt-displayed-in-spring-mvc (Using JSTL)
+
+Handling Duplicate Transition 
+1. https://mkyong.com/spring-mvc/handling-duplicate-form-submission-in-spring-mvc/
