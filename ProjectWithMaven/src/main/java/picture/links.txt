@@ -17,3 +17,6 @@ Adding Favicon in Spring MVC
 
 Handling Duplicate Transition 
 1. https://mkyong.com/spring-mvc/handling-duplicate-form-submission-in-spring-mvc/
+
+Hibernate Sprring project Structure
+1.https://examples.javacodegeeks.com/enterprise-java/spring/mvc/spring-mvc-hibernate-tutorial/
